@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditProductsActivity">
+
+    <!-- TITLE -->
+    <EditText
+        android:id="@+id/editor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/editor_hint_name"
+        android:inputType="textCapWords"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="16dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:text="Product Name" />
+
+
+    <!-- Quantity / Price-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <!-- Price Text View -->
+        <TextView
+            android:id="@+id/editor_price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="8dp"
+            android:text="@string/editor_price_text_view"
+            android:textSize="18sp"
+            tools:text="Price:" />
+
+        <!-- PRICE -->
+        <EditText
+            android:id="@+id/editor_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/editor_price_text_view"
+            android:hint="@string/editor_hint_price"
+            android:inputType="numberDecimal"
+            tools:text="5.00" />
+        <!-- Quantity label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/editor_quantity_buttonMinus"
+            android:paddingRight="16dp"
+            android:text="@string/editor_quantity_text_view"
+            android:textSize="18sp"
+            tools:text="Quantity" />
+
+        <!-- Quantity Button - -->
+        <Button
+            android:id="@+id/editor_quantity_buttonMinus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/editor_quantity_editText"
+            android:text="-" />
+
+        <!-- Quantity editText -->
+        <EditText
+            android:id="@+id/editor_quantity_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/editor_quantity_buttonPlus"
+            android:inputType="number"
+            tools:text="5" />
+
+        <!-- Quantity Button + -->
+        <Button
+            android:id="@+id/editor_quantity_buttonPlus"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="8dp"
+            android:text="+" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+
+        <!-- Supplier name -->
+        <EditText
+            android:id="@+id/editor_supplier_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="start"
+            android:layout_alignParentStart="true"
+            android:hint="@string/editor_hint_supplierName"
+            android:textAlignment="textStart"
+            tools:text="Supplier Name"
+ />
+
+        <!-- Supplier phone -->
+        <EditText
+            android:id="@+id/editor_supplier_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:hint="@string/editor_hint_supplierPhone"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            tools:text="5551234567"
+            android:layout_alignParentRight="true"
+            android:gravity="end" />
+
+        <Button
+            android:id="@+id/editor_button_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editor_supplier_phone"
+            android:paddingBottom="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="Call Supplier"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <!-- Save/Update and Delete/Cancel buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:padding="8dp"
+        android:paddingTop="128dp">
+
+        <Button
+            android:id="@+id/editor_button_deleteCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            tools:text="Save" />
+
+        <Button
+            android:id="@+id/editor_button_saveUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            tools:text="Delete" />
+    </LinearLayout>
+
+</LinearLayout>

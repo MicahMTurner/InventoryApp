@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Quantity and sales dimens -->
+    <dimen name="width_height">48dp</dimen>
+    <dimen name="padding2">8dp</dimen>
+    <dimen name="view_padding">20dp</dimen>
+    <dimen name="view_text_size">16sp</dimen>
+</resources>
